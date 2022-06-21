@@ -1,0 +1,4 @@
+{
+  "backend": "http://localhost:3000",
+  "IQAirDevice" : "https://device.iqair.com/v2/626a424aaf20f7852662d529"
+}
