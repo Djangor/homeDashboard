@@ -45,9 +45,8 @@ export default {
       fetch(url)
           .then(result => result.json())
       .then(currentAQIData => {
-        console.log(currentAQIData);
-            this.measurement = currentAQIData
-          })
+        this.measurement = currentAQIData
+      })
       .catch(err => {
         console.log(err);
         this.city = 'n/a';

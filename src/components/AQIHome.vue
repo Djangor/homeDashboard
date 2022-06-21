@@ -42,7 +42,6 @@ export default {
       fetch(url)
           .then(data => data.json())
           .then(currentAQIData => {
-            console.log(JSON.stringify(currentAQIData));
             this.currentPM2 = currentAQIData.current.p2
             this.currentCO2 = currentAQIData.current.co
           })

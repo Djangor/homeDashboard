@@ -69,7 +69,6 @@ export default {
           )
           .then(entries => {
             this.taskArray = formatEntries(JSON.parse(entries));
-            console.log(JSON.stringify(entries));
           })
           .catch(err => {
             console.log(err);

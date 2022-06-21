@@ -11,7 +11,7 @@
     </div>
     <div class="row">
       <div class="col">
-
+        <BringItems></BringItems>
       </div>
       <div class="col">
         <DjangoTasks></DjangoTasks>
@@ -25,6 +25,7 @@ import AQIHome from "@/components/AQIHome";
 import AQIOutside from "@/components/AQIOutside";
 import DjangoCal from "@/components/DjangoCal";
 import DjangoTasks from "@/components/DjangoTasks";
+import BringItems from "@/components/Bring"
 
 export default {
   name: 'App',
@@ -32,7 +33,8 @@ export default {
     AQIHome,
     AQIOutside,
     DjangoCal,
-    DjangoTasks
+    DjangoTasks,
+    BringItems
   }
 }
 </script>

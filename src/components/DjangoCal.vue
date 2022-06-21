@@ -143,7 +143,6 @@ export default {
           )
           .then(entries => {
             this.calArray = formatEntries(JSON.parse(entries));
-            console.log(JSON.stringify(entries));
           })
           .catch(err => {
             console.log(err);
