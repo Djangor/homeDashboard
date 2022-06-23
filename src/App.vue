@@ -16,6 +16,9 @@
       <div class="col">
         <DjangoTasks></DjangoTasks>
       </div>
+      <div class="col">
+        <Weather></Weather>
+      </div>
     </div>
   </div>
 </template>
@@ -25,7 +28,8 @@ import AQIHome from "@/components/AQIHome";
 import AQIOutside from "@/components/AQIOutside";
 import DjangoCal from "@/components/DjangoCal";
 import DjangoTasks from "@/components/DjangoTasks";
-import BringItems from "@/components/Bring"
+import BringItems from "@/components/Bring";
+import Weather from "@/components/Weather";
 
 export default {
   name: 'App',
@@ -34,7 +38,8 @@ export default {
     AQIOutside,
     DjangoCal,
     DjangoTasks,
-    BringItems
+    BringItems,
+    Weather
   }
 }
 </script>
