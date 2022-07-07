@@ -1,10 +1,9 @@
 <template>
   <div class="DjangoTasks">
-    <h1>Tasks Django</h1>
     <table>
       <thead v-if="taskArray.length">
       <tr>
-        <th style="text-decoration: underline">Today:</th>
+        <th style="text-decoration: underline">Todo:</th>
       </tr>
       </thead>
       <tbody>

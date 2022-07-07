@@ -1,17 +1,10 @@
 <template>
   <div class="Bring">
-    <h1>Bring Items</h1>
-    <table>
-      <tbody>
-      <tr v-for="entry in bringArray" :key="entry">
-        <td>
-          {{entry.name}}
-          <span v-if="entry.specification > ''">
-            &nbsp;({{entry.specification}})</span>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    <ul>
+        <li class="" v-for="entry in bringArray" :key="entry">
+            {{entry.name}}
+        </li>
+    </ul>
   </div>
 </template>
 
@@ -56,3 +49,21 @@ export default {
 }
 
 </script>
+
+<style>
+.bringCard {
+  align-items: center;
+  display: flex;
+  min-width: 100px;
+  max-width: 100px !important;
+  min-height: 100px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.bringText {
+  margin: auto;
+  height:100%;
+  width:100%
+}
+</style>

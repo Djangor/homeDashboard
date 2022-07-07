@@ -1,6 +1,5 @@
 <template>
   <div class="DjangoCalendar">
-    <h1>Calendar Django</h1>
     <table>
       <thead v-if="calArray.today.length">
       <tr>

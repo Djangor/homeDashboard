@@ -1,15 +1,11 @@
 <template>
   <div class="Weather">
-    <h1>Weather data</h1>
-    <div class="todayRow">
-      <div class="weatherNow"><i class="wi" v-bind:class="weatherData.currentWeatherType"></i></div>
+      <div class="weatherNow"><i class="wi weatherBubble" v-bind:class="weatherData.currentWeatherType"></i></div>
       <div class="weatherUpcoming"><i class="wi" v-bind:class="weatherData.upcomingWeatherType"></i></div>
-    </div>
-    <div class="weatherForecastRow">
+
       <div v-for="entry in weatherData.forecast" :key="entry" class="weatherForecast">
         <i class="wi" v-bind:class="entry.weatherType"></i>
       </div>
-    </div>
   </div>
 </template>
 
@@ -56,21 +52,32 @@ export default {
 </script>
 
 <style>
-.weatherForecastRow {
-  position: relative;
-}
+
 .weatherNow {
   font-size: 72pt;
-  margin-top:-20px;
+  width: 150px;
+  height: 150px;
+  margin-top: 5px;
+  float: left;
+  margin-right: -15px;
+  margin-left: 15px;
+
 }
 .weatherUpcoming {
   font-size: 48pt;
+  padding-right:15px;
+  float: left;
+
 }
 .weatherForecast {
   font-size:24pt;
-}
-.weatherNow, .weatherUpcoming, .weatherForecast {
   padding-right:15px;
   float: left;
+
+}
+.weatherBubble {
+  top: -17px;
+  left: 17px;
+  position: relative;
 }
 </style>

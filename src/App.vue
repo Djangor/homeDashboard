@@ -1,26 +1,27 @@
 <template>
-  <div class="container" style="margin-left: 20px;">
-    <div class="row">
-      <div class="col" style="min-width:700px">
-        <AQIHome></AQIHome>
-        <AQIOutside></AQIOutside>
+      <div class="topLeft">
+        <DateTime></DateTime>
+        <Weather></Weather>
+        <div class="aqiWrapper">
+          <AQIHome></AQIHome>
+          <AQIOutside></AQIOutside>
+        </div>
       </div>
-      <div class="col">
-        <DjangoCal></DjangoCal>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
+      <div class="topRight">
         <BringItems></BringItems>
       </div>
-      <div class="col">
+      <div class="bottomLeft">
+        <DjangoCal></DjangoCal>
+
+      </div>
+      <div class="bottomRight">
         <DjangoTasks></DjangoTasks>
       </div>
-      <div class="col">
-        <Weather></Weather>
+      <div class="rightCenter">
+        <CryptoView></CryptoView>
       </div>
-    </div>
-  </div>
+      <div class="bottomCenter">
+      </div>
 </template>
 
 <script>
@@ -30,7 +31,8 @@ import DjangoCal from "@/components/DjangoCal";
 import DjangoTasks from "@/components/DjangoTasks";
 import BringItems from "@/components/Bring";
 import Weather from "@/components/Weather";
-
+import CryptoView from "@/components/Crypto";
+import DateTime from "@/components/DateTime";
 export default {
   name: 'App',
   components: {
@@ -39,7 +41,9 @@ export default {
     DjangoCal,
     DjangoTasks,
     BringItems,
-    Weather
+    Weather,
+    CryptoView,
+    DateTime
   }
 }
 </script>
@@ -64,34 +68,58 @@ export default {
   margin-top: 20px;
 }
 
+.topLeft{
+  position:absolute;
+  left:20px;
+  display:flex;
+  flex-wrap:wrap;
+  max-width: 700px;
+}
+
+.topRight {
+  position:absolute;
+  right:20px;
+  top:20px;
+}
+
+.bottomLeft {
+  position:absolute;
+  left:20px;
+  bottom:20px;
+}
+.bottomRight {
+  position:absolute;
+  bottom:20px;
+  right:20px
+}
+
+.rightCenter {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.bottomCenter {
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
 .AQI {
-  margin-right: 15px;
-  height: 150px;
   width: 150px;
-  border-radius: 50%;
-  display: inline-block;
+  margin-top: 5px;
+  max-height: 60px;
 }
 .title {
   font-size: 50pt;
   margin: 0 auto;
-  display: table;
-  margin-top: 21px;
+  margin-top: 14px;
 }
 .unit{
   font-family: "Ubuntu Regular";
-  display: table;
   margin: 0 auto;
-  margin-top: -23px;
-}
-.BgGreen {
-  background-color: forestgreen;
-}
-
-.BgOrange {
-  background-color: darkorange;
-}
-
-.BgRed {
-  background-color: crimson;
+  padding-left: 10px;
 }
 </style>
