@@ -59,7 +59,6 @@ export default {
   height: 150px;
   margin-top: 5px;
   float: left;
-  margin-right: -15px;
   margin-left: 15px;
 
 }

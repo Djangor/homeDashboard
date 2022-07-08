@@ -1,7 +1,7 @@
 <template>
   <div class="Bring">
-    <ul>
-        <li class="" v-for="entry in bringArray" :key="entry">
+    <ul class="bringList">
+        <li class="bringCard" v-for="entry in bringArray" :key="entry">
             {{entry.name}}
         </li>
     </ul>
@@ -52,18 +52,10 @@ export default {
 
 <style>
 .bringCard {
-  align-items: center;
-  display: flex;
-  min-width: 100px;
-  max-width: 100px !important;
-  min-height: 100px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  text-align: center;
 }
-.bringText {
-  margin: auto;
-  height:100%;
-  width:100%
+
+.bringList {
+  list-style-type: none;
+  text-align:right;
 }
 </style>

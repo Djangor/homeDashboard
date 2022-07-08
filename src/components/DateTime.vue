@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     async fetchData() {
-      console.log('fetching');
       const date = new Date();
       this.time = pad(date.getHours()) + ':' + pad(date.getMinutes());
       this.date = translateDay(date.getDay()) + ' ' + pad(date.getDate()) + '.' + pad(date.getMonth() + 1) + '.' + date.getFullYear();
